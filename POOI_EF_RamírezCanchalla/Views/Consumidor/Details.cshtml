@@ -1,0 +1,58 @@
+﻿@model POOI_EF_RamírezCanchalla.Models.Consumidor
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle del consumidor</h2>
+
+<div>
+    <h4>Consumidor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dnicont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dnicont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apecont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apecont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idpais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idpais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.dnicont }) |
+    @Html.ActionLink("Volver a la Lista", "Index")
+</p>

@@ -1,0 +1,65 @@
+﻿@model POOI_EF_RamírezCanchalla.Models.Consumidor
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar Consumidor</h2>
+
+<h3>Está seguro de eliminar este registro?</h3>
+<div>
+    <h4>Consumidor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dnicont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dnicont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apecont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apecont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idpais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idpais)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.dnicont)
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Volver a lista", "Index")
+        </div>
+    }
+</div>
